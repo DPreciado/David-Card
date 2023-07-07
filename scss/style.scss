@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'Consolas';
+  src: url('../assets/fonts/CONSOLA.TTF') format('truetype');
+}
 body {
   background-color:darken(#252b37, 4%) !important;
   background-image: url('../assets/imgs/background.jpg');
@@ -24,9 +28,12 @@ a{
 
 //fonts
 .name-font{
+  font-size: 25px;
+}
+.info-font{
   font-size: 20px;
 }
-.name-font span{
+.text-monospace span{
   border-radius: 3px 12px;
   font-size: 17px;
 }
@@ -34,7 +41,7 @@ a{
   font-size: 16px;
 }
 .tittle-font{
-  font-size: 20px;
+  font-size: 25px;
 }
 .list-font{
   margin-top: 5px;
@@ -44,13 +51,56 @@ a{
   margin-top: 5px;
   font-size: 15px;
 }
+.function-font{
+  font-size: 20px;
+  color: #0f9fff;
+  font-family: 'Consolas';
+  span{
+    color: #0fff87;
+    span{
+      color: #98fe12;
+    }
+  }
+}
+.function-font-content{
+  font-size: 20px;
+  color: #33B4FE;
+  font-family: 'Consolas';
+  span{
+    color: #ba62dd;
+      // span{
+        // color: #fff;
+        //span{
+          //color: #CF723A;
+          //span{
+            //color: #fff;
+          //}
+        //}
+      // }
+  }
+}
+.function-font-end{
+  font-size: 20px;
+  color: #98fe12;
+  font-family: 'Consolas';
+}
+.comment-block-font{
+  font-size: 20px;
+  color: #549954;
+  font-family: 'Consolas';
+}
+
+//list
+.list-custom{
+  margin-left: 30px;
+}
 
 //margins
 .m-l1{
-  margin-left: 12.5px;
+  margin-left: 7px;
 }
 .m-l2{
-  margin-left: 7px;
+  margin-left: 12.5px;
 }
 .m-l3{
   margin-left: 35px;
@@ -104,13 +154,15 @@ svg path {
 }
 
 #card-container {
-  height: 425px;
-  width: 770px;
+  // height: 425px;
+  // width: 770px;
+  height: 52vh;
+  width: 50vw;
   @include backlight(15px, 0px, 10px, #0fffc1, #7e0fff, 10s);
   transition: transform 0.1s ease-out;
 
-  #card #include{
-    transition: transform 0.1s ease-out;
+  #card #include-img{
+    transition: transform 0.2s ease-out;
   }
 
   #card > * {
@@ -122,8 +174,10 @@ svg path {
   }
 
   #card{
-    height: 425px;
-    width: 770px;
+    // height: 425px;
+    // width: 770px;
+    height: 52vh;
+    width: 50vw;
     background-color:#151922;
     background-size: cover;
     border-style: solid;
@@ -136,12 +190,28 @@ svg path {
 
 }
 
+//medidas de pantalla
+@media (max-width: 768px) {
+  #card-container #card {
+    height: 99%;
+    width: 85vw;
+  }
+  #card-container {
+    height: 99%;
+    width: 85vw;
+  }
+  #telefono {
+    float:none;
+  }
+}
 .rounded-circle {
   width: 120px;
   height: 120px;
   border-style: solid;
   animation: ColorChanger 10s ease infinite !important;
 }
-
+.tel{
+  float: right;
+}
 
 

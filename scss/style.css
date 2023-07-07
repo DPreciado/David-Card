@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "Consolas";
+  src: url("../assets/fonts/CONSOLA.TTF") format("truetype");
+}
 body {
   background-color: #1d212b !important;
   background-image: url("../assets/imgs/background.jpg");
@@ -24,10 +28,14 @@ a {
 }
 
 .name-font {
+  font-size: 25px;
+}
+
+.info-font {
   font-size: 20px;
 }
 
-.name-font span {
+.text-monospace span {
   border-radius: 3px 12px;
   font-size: 17px;
 }
@@ -37,7 +45,7 @@ a {
 }
 
 .tittle-font {
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .list-font {
@@ -50,12 +58,49 @@ a {
   font-size: 15px;
 }
 
+.function-font {
+  font-size: 20px;
+  color: #0f9fff;
+  font-family: "Consolas";
+}
+.function-font span {
+  color: #0fff87;
+}
+.function-font span span {
+  color: #98fe12;
+}
+
+.function-font-content {
+  font-size: 20px;
+  color: #33B4FE;
+  font-family: "Consolas";
+}
+.function-font-content span {
+  color: #ba62dd;
+}
+
+.function-font-end {
+  font-size: 20px;
+  color: #98fe12;
+  font-family: "Consolas";
+}
+
+.comment-block-font {
+  font-size: 20px;
+  color: #549954;
+  font-family: "Consolas";
+}
+
+.list-custom {
+  margin-left: 30px;
+}
+
 .m-l1 {
-  margin-left: 12.5px;
+  margin-left: 7px;
 }
 
 .m-l2 {
-  margin-left: 7px;
+  margin-left: 12.5px;
 }
 
 .m-l3 {
@@ -78,8 +123,8 @@ svg path {
   }
 }
 #card-container {
-  height: 425px;
-  width: 770px;
+  height: 52vh;
+  width: 50vw;
   transition: transform 0.1s ease-out;
 }
 #card-container:after {
@@ -110,8 +155,8 @@ svg path {
     background-position: 0% 50%;
   }
 }
-#card-container #card #include {
-  transition: transform 0.1s ease-out;
+#card-container #card #include-img {
+  transition: transform 0.2s ease-out;
 }
 #card-container #card > * {
   pointer-events: none;
@@ -120,8 +165,8 @@ svg path {
   pointer-events: auto;
 }
 #card-container #card {
-  height: 425px;
-  width: 770px;
+  height: 52vh;
+  width: 50vw;
   background-color: #151922;
   background-size: cover;
   border-style: solid;
@@ -131,9 +176,26 @@ svg path {
   animation: ColorChanger 10s ease infinite !important;
 }
 
+@media (max-width: 768px) {
+  #card-container #card {
+    height: 99%;
+    width: 85vw;
+  }
+  #card-container {
+    height: 99%;
+    width: 85vw;
+  }
+  #telefono {
+    float: none;
+  }
+}
 .rounded-circle {
   width: 120px;
   height: 120px;
   border-style: solid;
   animation: ColorChanger 10s ease infinite !important;
+}
+
+.tel {
+  float: right;
 }/*# sourceMappingURL=style.css.map */

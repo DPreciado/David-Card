@@ -33,7 +33,7 @@ elCont.addEventListener('mousemove', (evt) => {
 
     const stringChild = `
         perspective(500px)
-        scale(1.05)
+        scale(1.03)
         rotateX(${xRotationChild}deg)
         rotateY(${-yRotationChild}deg)`;
 
@@ -49,7 +49,6 @@ elCont.addEventListener('mousemove', (evt) => {
         elHijo.style.transform = stringChild;
     });
 })
-
 elCont.addEventListener('mouseout', (evt) => {
     const isInsideChild = elCont.contains(evt.relatedTarget);
     if (isInsideChild) {
@@ -91,6 +90,6 @@ if (mesActual < mesNacimiento || (mesActual === mesNacimiento && diaActual < dia
 }
 
 const spanEdad = document.getElementById('edad');
-spanEdad.textContent = edad + 'y';
+spanEdad.textContent = edad + ' y/o';
 
 
