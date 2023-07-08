@@ -14,7 +14,7 @@ gitUser.addEventListener("mousemove", disableMousemove);
 
 elCont.addEventListener('mousemove', (evt) => {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (screenWidth >= 560){
+    if (screenWidth >= 830){
         const { layerX, layerY } = evt;
         const { width, height } = elCont.getBoundingClientRect();
     
@@ -102,7 +102,7 @@ function adjustTemplateContainer() {
     var templateContainerMobile = document.getElementById("template-container-mobile");
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    if (screenWidth > 700) {
+    if (screenWidth >=  1000) {
         templateContainerPc.style.display = ""; // Mostrar el contenedor si la anchura es mayor de 700px
         templateContainerMobile.style.display = "none"; // Mostrar el contenedor si la anchura es mayor de 700px
     } else {
