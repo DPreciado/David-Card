@@ -28,11 +28,11 @@ a {
 }
 
 .name-font {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .info-font {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .text-monospace span {
@@ -48,18 +48,13 @@ a {
   font-size: 25px;
 }
 
-.list-font {
-  margin-top: 5px;
-  font-size: 18px;
-}
-
 .email-font {
   margin-top: 5px;
   font-size: 15px;
 }
 
 .function-font {
-  font-size: 18px;
+  font-size: 22px;
   color: #0f9fff;
   font-family: "Consolas";
 }
@@ -71,7 +66,8 @@ a {
 }
 
 .function-font-content {
-  font-size: 18px;
+  margin-top: 5px;
+  font-size: 22px;
   color: #33B4FE;
   font-family: "Consolas";
 }
@@ -80,7 +76,7 @@ a {
 }
 
 .function-font-end {
-  font-size: 18px;
+  font-size: 22px;
   color: #98fe12;
   font-family: "Consolas";
 }
@@ -177,12 +173,26 @@ svg path {
 }
 
 .rounded-circle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-style: solid;
   animation: ColorChanger 10s ease infinite !important;
 }
 
+@media (max-width: 1600px) {
+  #card-container #card {
+    margin-left: -2.5%;
+    width: 70vw;
+  }
+  #card-container {
+    margin-left: -2.8%;
+    width: 70vw;
+  }
+  #card-container:after {
+    left: 15px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 1000px) {
   #card-container #card {
     margin-left: -2.5%;
@@ -241,7 +251,7 @@ svg path {
     height: 80px;
   }
   .name-font {
-    font-size: 23px;
+    font-size: 33px;
   }
 }
 @media (max-width: 585px) {
@@ -305,6 +315,15 @@ svg path {
   }
   .name-font {
     font-size: 23px;
+  }
+  .name-font {
+    font-size: 22px;
+  }
+  .text-monospace span {
+    font-size: 16px;
+  }
+  .info-font {
+    font-size: 20px;
   }
 }
 .tel {

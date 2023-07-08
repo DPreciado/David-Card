@@ -28,10 +28,10 @@ a{
 
 //fonts
 .name-font{
-  font-size: 25px;
+  font-size: 30px;
 }
 .info-font{
-  font-size: 20px;
+  font-size: 24px;
 }
 .text-monospace span{
   border-radius: 3px 12px;
@@ -43,16 +43,12 @@ a{
 .tittle-font{
   font-size: 25px;
 }
-.list-font{
-  margin-top: 5px;
-  font-size: 18px;
-}
 .email-font{
   margin-top: 5px;
   font-size: 15px;
 }
 .function-font{
-  font-size: 18px;
+  font-size: 22px;
   color: #0f9fff;
   font-family: 'Consolas';
   span{
@@ -63,7 +59,8 @@ a{
   }
 }
 .function-font-content{
-  font-size: 18px;
+  margin-top: 5px;
+  font-size: 22px;
   color: #33B4FE;
   font-family: 'Consolas';
   span{
@@ -80,7 +77,7 @@ a{
   }
 }
 .function-font-end{
-  font-size: 18px;
+  font-size: 22px;
   color: #98fe12;
   font-family: 'Consolas';
 }
@@ -154,8 +151,6 @@ svg path {
 }
 
 #card-container {
-  // height: 425px;
-  // width: 770px;
   height: 100%;
   width: 50vw;
   @include backlight(15px, 0px, 10px, #0fffc1, #7e0fff, 10s);
@@ -174,8 +169,6 @@ svg path {
   }
 
   #card{
-    // height: 425px;
-    // width: 770px;
     height: 100%;
     width: 50vw;
     background-color:#151922;
@@ -190,12 +183,26 @@ svg path {
 
 }
 .rounded-circle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-style: solid;
   animation: ColorChanger 10s ease infinite !important;
 }
 //medidas de pantalla
+@media (max-width: 1600px) {
+  #card-container #card {
+    margin-left: -2.5%;
+    width: 70vw;
+  }
+  #card-container {
+    margin-left: -2.8%;
+    width: 70vw;
+  }
+  #card-container:after {
+    left: 15px;
+    margin: 0 auto;
+  }
+}
 @media (max-width: 1000px) {
   #card-container #card {
     margin-left: -2.5%;
@@ -227,7 +234,7 @@ svg path {
     height: 80px;
   }
   .name-font{
-    font-size: 23px;
+    font-size: 33px;
   }
 }
 @media (max-width: 585px) {
@@ -264,6 +271,15 @@ svg path {
   }
   .name-font{
     font-size: 23px;
+  }
+  .name-font {
+    font-size: 22px;
+  }
+  .text-monospace span {
+    font-size: 16px;
+  }
+  .info-font {
+    font-size: 20px;
   }
 }
 
