@@ -102,7 +102,7 @@ function adjustTemplateContainer() {
     var templateContainerMobile = document.getElementById("template-container-mobile");
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    if (screenWidth >=  1000) {
+    if (screenWidth >=  991) {
         templateContainerPc.style.display = ""; // Mostrar el contenedor si la anchura es mayor de 700px
         templateContainerMobile.style.display = "none"; // Mostrar el contenedor si la anchura es mayor de 700px
     } else {
