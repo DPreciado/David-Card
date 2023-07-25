@@ -14,7 +14,7 @@ gitUser.addEventListener("mousemove", disableMousemove);
 
 elCont.addEventListener('mousemove', (evt) => {
     const screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-    if (screenWidth >= 830){
+    if (screenWidth >= 992){
         const { layerX, layerY } = evt;
         const { width, height } = elCont.getBoundingClientRect();
     
