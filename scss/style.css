@@ -28,11 +28,11 @@ a {
 }
 
 .name-font {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .info-font {
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .text-monospace span {
@@ -48,18 +48,13 @@ a {
   font-size: 25px;
 }
 
-.list-font {
-  margin-top: 5px;
-  font-size: 18px;
-}
-
 .email-font {
   margin-top: 5px;
   font-size: 15px;
 }
 
 .function-font {
-  font-size: 18px;
+  font-size: 22px;
   color: #0f9fff;
   font-family: "Consolas";
 }
@@ -71,7 +66,8 @@ a {
 }
 
 .function-font-content {
-  font-size: 18px;
+  margin-top: 5px;
+  font-size: 22px;
   color: #33B4FE;
   font-family: "Consolas";
 }
@@ -80,7 +76,7 @@ a {
 }
 
 .function-font-end {
-  font-size: 18px;
+  font-size: 22px;
   color: #98fe12;
   font-family: "Consolas";
 }
@@ -124,14 +120,14 @@ svg path {
 }
 #card-container {
   height: 100%;
-  width: 50vw;
+  width: 90%;
   transition: transform 0.1s ease-out;
 }
 #card-container:after {
   position: absolute;
   content: "";
   top: 0px;
-  left: 15px;
+  left: 0px;
   right: 0;
   z-index: -1;
   height: 100%;
@@ -166,7 +162,7 @@ svg path {
 }
 #card-container #card {
   height: 100%;
-  width: 50vw;
+  width: 90%;
   background-color: #151922;
   background-size: cover;
   border-style: solid;
@@ -177,13 +173,43 @@ svg path {
 }
 
 .rounded-circle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-style: solid;
   animation: ColorChanger 10s ease infinite !important;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 2000px) {
+  #card-container:after {
+    position: absolute;
+    content: "";
+    top: 0px;
+    left: 0px;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 87.4%;
+    margin: 0 auto;
+    -moz-filter: blur(10px);
+    -ms-filter: blur(10px);
+    filter: blur(10px);
+    background: linear-gradient(270deg, #0fffc1, #7e0fff);
+    background-size: 200% 200%;
+    animation: animateGlow 10s ease infinite;
+  }
+  @keyframes animateGlow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+@media (max-width: 991px) {
   #card-container #card {
     margin-left: -2.5%;
     width: 100%;
@@ -200,7 +226,7 @@ svg path {
     right: 0;
     z-index: -1;
     height: 100%;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
     -moz-filter: blur(10px);
     -ms-filter: blur(10px);
@@ -241,29 +267,29 @@ svg path {
     height: 80px;
   }
   .name-font {
-    font-size: 23px;
+    font-size: 33px;
   }
 }
 @media (max-width: 585px) {
   #card-container #card {
     margin-left: -2.5%;
     height: 100%;
-    width: 94vw;
+    width: 110%;
   }
   #card-container {
-    margin-left: -2.8%;
+    margin-left: -2.5%;
     height: 100%;
-    width: 94vw;
+    width: 110%;
   }
   #card-container:after {
     position: absolute;
     content: "";
     top: 0px;
-    left: 10px;
+    left: 0px;
     right: 0;
     z-index: -1;
     height: 100%;
-    width: 100%;
+    width: 105%;
     margin: 0 auto;
     -moz-filter: blur(10px);
     -ms-filter: blur(10px);
@@ -305,6 +331,15 @@ svg path {
   }
   .name-font {
     font-size: 23px;
+  }
+  .name-font {
+    font-size: 22px;
+  }
+  .text-monospace span {
+    font-size: 16px;
+  }
+  .info-font {
+    font-size: 20px;
   }
 }
 .tel {

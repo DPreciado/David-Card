@@ -28,10 +28,10 @@ a{
 
 //fonts
 .name-font{
-  font-size: 25px;
+  font-size: 30px;
 }
 .info-font{
-  font-size: 20px;
+  font-size: 24px;
 }
 .text-monospace span{
   border-radius: 3px 12px;
@@ -43,16 +43,12 @@ a{
 .tittle-font{
   font-size: 25px;
 }
-.list-font{
-  margin-top: 5px;
-  font-size: 18px;
-}
 .email-font{
   margin-top: 5px;
   font-size: 15px;
 }
 .function-font{
-  font-size: 18px;
+  font-size: 22px;
   color: #0f9fff;
   font-family: 'Consolas';
   span{
@@ -63,7 +59,8 @@ a{
   }
 }
 .function-font-content{
-  font-size: 18px;
+  margin-top: 5px;
+  font-size: 22px;
   color: #33B4FE;
   font-family: 'Consolas';
   span{
@@ -80,7 +77,7 @@ a{
   }
 }
 .function-font-end{
-  font-size: 18px;
+  font-size: 22px;
   color: #98fe12;
   font-family: 'Consolas';
 }
@@ -111,7 +108,7 @@ svg path {
   fill: #fff;
 }
 
-@mixin backlight($x, $y, $spread, $colorA, $colorB, $duration) {
+@mixin backlight($x, $y, $spread, $colorA, $colorB, $duration, $w) {
   &:after {
     position:absolute;
     content: "";
@@ -119,10 +116,8 @@ svg path {
     left: $x;
     right: 0;
     z-index: -1;
-    // height: 70%;
-    // width: 90%;
     height: 100%;
-    width: 100%;
+    width: $w;
     margin: 0 auto;
     -webkit-filter: blur($spread);
     -moz-filter: blur($spread);
@@ -154,11 +149,9 @@ svg path {
 }
 
 #card-container {
-  // height: 425px;
-  // width: 770px;
   height: 100%;
-  width: 50vw;
-  @include backlight(15px, 0px, 10px, #0fffc1, #7e0fff, 10s);
+  width: 90%;
+  @include backlight(0px, 0px, 10px, #0fffc1, #7e0fff, 10s, 100%);
   transition: transform 0.1s ease-out;
 
   #card #include-img{
@@ -174,10 +167,8 @@ svg path {
   }
 
   #card{
-    // height: 425px;
-    // width: 770px;
     height: 100%;
-    width: 50vw;
+    width: 90%;
     background-color:#151922;
     background-size: cover;
     border-style: solid;
@@ -190,13 +181,19 @@ svg path {
 
 }
 .rounded-circle {
-  width: 120px;
-  height: 120px;
+  width: 140px;
+  height: 140px;
   border-style: solid;
   animation: ColorChanger 10s ease infinite !important;
 }
 //medidas de pantalla
-@media (max-width: 1000px) {
+
+@media (max-width: 2000px) {
+  #card-container {
+    @include backlight(0px, 0px, 10px, #0fffc1, #7e0fff, 10s, 87.4%);
+  }
+}
+@media (max-width: 991px) {
   #card-container #card {
     margin-left: -2.5%;
     width: 100%;
@@ -204,7 +201,7 @@ svg path {
   #card-container {
     margin-left: -2.8%;
     width: 100%;
-    @include backlight(0px, 0px, 10px, #0fffc1, #7e0fff, 10s);
+    @include backlight(0px, 0px, 10px, #0fffc1, #7e0fff, 10s, 95%);
   }
   #telefono {
     float:right;
@@ -227,20 +224,20 @@ svg path {
     height: 80px;
   }
   .name-font{
-    font-size: 23px;
+    font-size: 33px;
   }
 }
 @media (max-width: 585px) {
   #card-container #card {
     margin-left: -2.5%;
     height: 100%;
-    width: 94vw;
+    width: 110%;
   }
   #card-container {
-    margin-left: -2.8%;
+    margin-left: -2.5%;
     height: 100%;
-    width: 94vw;
-    @include backlight(10px, 0px, 10px, #0fffc1, #7e0fff, 10s);
+    width: 110%;
+    @include backlight(0px, 0px, 10px, #0fffc1, #7e0fff, 10s, 105%);
   }
   #telefono {
     float:none;
@@ -264,6 +261,15 @@ svg path {
   }
   .name-font{
     font-size: 23px;
+  }
+  .name-font {
+    font-size: 22px;
+  }
+  .text-monospace span {
+    font-size: 16px;
+  }
+  .info-font {
+    font-size: 20px;
   }
 }
 
