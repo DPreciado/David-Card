@@ -1,5 +1,5 @@
 const elCont = document.getElementById('card-container')
-const gitUser = document.getElementById("git-user")
+const gitUser = document.getElementById("linkbadge-user")
 const elHijos = elCont.querySelectorAll('#include-img')
 const height = elCont.clientHeight
 const width = elCont.clientWidth
@@ -102,7 +102,7 @@ function adjustTemplateContainer() {
     var templateContainerMobile = document.getElementById("template-container-mobile");
     var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 
-    if (screenWidth >=  991) {
+    if (screenWidth >=  992) {
         templateContainerPc.style.display = ""; // Mostrar el contenedor si la anchura es mayor de 700px
         templateContainerMobile.style.display = "none"; // Mostrar el contenedor si la anchura es mayor de 700px
     } else {

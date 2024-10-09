@@ -162,7 +162,7 @@ svg path {
     pointer-events: none;
   }
 
-  #card #git-user {
+  #card #linkbadge-user {
     pointer-events: auto;
   }
 
@@ -206,11 +206,11 @@ svg path {
   #telefono {
     float:right;
   }
-  #git-user {
+  #linkbadge-user {
     float:none;
     margin-left: 10px;
   }
-  #git-container {
+  #linkbadge-container {
     margin-top: 2vw;
   }
   .m-l1{
@@ -242,11 +242,11 @@ svg path {
   #telefono {
     float:none;
   }
-  #git-user {
+  #linkbadge-user {
     float:none;
     margin-left: 10px;
   }
-  #git-container {
+  #linkbadge-container {
     margin-top: 2vw;
   }
   .m-l1{
