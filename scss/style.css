@@ -160,6 +160,11 @@ svg path {
 #card-container #card #linkbadge-user {
   pointer-events: auto;
 }
+#linkbadge-user:hover,
+#linkbadge-user:active,
+#linkbadge-user:focus {
+  color: #f8f9fa !important;
+}
 #card-container #card {
   height: 100%;
   width: 90%;
